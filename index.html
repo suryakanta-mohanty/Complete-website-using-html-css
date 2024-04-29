@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>complete website using HTML And CSS</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
 </head>
 <body>
     <section id="header">
@@ -28,11 +31,11 @@
 
     <nav id="sideNav">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Feature</a></li>
-            <li><a href="#">Course</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#features">Feature</a></li>
+            <li><a href="#course">Course</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <img src="./image/menu.png"  id="menuBtn" alt="menu icon">
@@ -252,6 +255,12 @@
                 sideNav.style.right = "-250px";
             }
         }
+
+        
+	    var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });
 
     </script>
 </body>
